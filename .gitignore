@@ -1,0 +1,24 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+# Taffy
+/taffy
+
+# modules
+/modules
+
+# Testbox
+/testbox
+
+# coldbox environment
+.env
+
+# Mac OS only
+.DS_Store

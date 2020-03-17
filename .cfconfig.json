@@ -1,0 +1,35 @@
+{
+  "datasources":
+  {
+    "nintendo":
+    {
+      "allowAlter":true,
+      "allowCreate":true,
+      "allowDelete":true,
+      "allowDrop":true,
+      "allowGrant":true,
+      "allowInsert":true,
+      "allowRevoke":true,
+      "allowSelect":true,
+      "allowUpdate":true,
+      "blob":"true",
+      "class":"${DB_CLASS}",
+      "clob":"true",
+      "connectionLimit":"100",
+      "connectionTimeout":"0",
+      "custom":"",
+      "database":"${DB_SCHEMA}",
+      "dbdriver":"MariaDB",
+      "dsn":"${DB_CONNECTIONSTRING}",
+      "host":"localhost",
+      "metaCacheTimeout":"60000",
+      "password":"${MYSQL_DB_PW}",
+      "port":"3306",
+      "storage":"false",
+      "timezone":"UTC",
+      "username":"${MYSQL_DB_USER}",
+      "validate":"false"
+    }
+  }
+}
+

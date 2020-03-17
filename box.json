@@ -1,0 +1,14 @@
+{
+    "dependencies":{
+        "cfconfig-services":"^1.6.4",
+        "Taffy":"^3.1.0"
+    },
+    "devDependencies":{
+        "testbox":"^3.2.0+356"
+    },
+    "installPaths":{
+        "cfconfig-services":"modules/cfconfig-services/",
+        "Taffy":"Taffy/",
+        "testbox":"testbox/"
+    }
+}
