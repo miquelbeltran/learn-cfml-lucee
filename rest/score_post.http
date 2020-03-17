@@ -1,0 +1,8 @@
+POST http://127.0.0.1:64230/api/index.cfm/games/1/score
+Content-Type: application/json
+
+{
+  "score": 1
+}
+
+###
