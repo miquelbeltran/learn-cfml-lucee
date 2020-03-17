@@ -1,4 +1,8 @@
 component extends="taffy.core.resource" taffy_uri="/games/{gameId}" {
+
+// while this is more efficient to run as a single SQL query,
+// I wanted to experiment a bit with multiple queries and operations with the results.
+
     function get()
     {
         queryParams = {id:{type:'int', value:gameId}};
@@ -17,12 +21,7 @@ component extends="taffy.core.resource" taffy_uri="/games/{gameId}" {
                 WHERE game_id = :id
             "); }
 
-        // while this is more efficient to run as a single SQL query,
-        // I wanted to experiment a bit with multiple queries and operations with the results.
-        totalScore = 0;
-        for (var score in getGameScore) {
-            totalScore += score.score;
-        }
+        totalScore = new Score().calculateScore(getGameScore);
 
         return rep({
             "id": getGame[1].id,
