@@ -1,28 +1,25 @@
-component extends="testbox.system.BaseSpec"{
+component extends="testbox.system.BaseSpec" {
 
-/*********************************** LIFE CYCLE Methods ***********************************/
+	/*********************************** LIFE CYCLE Methods ***********************************/
 
-    function beforeAll()
-    {
-        application.salvador = 1;
-    }
+	function beforeAll(){
+		application.salvador = 1;
+	}
 
-    function afterAll()
-    {
-        structClear(application);
-    }
+	function afterAll(){
+		structClear( application );
+	}
 
-/*********************************** BDD SUITES ***********************************/
+	/*********************************** BDD SUITES ***********************************/
 
-    function run()
-    {
-        describe( "Score Spec", function()
-        {
-            it("calculate total score", function() {
-                score = new Score();
-                total = score.calculateScore([{score: 1}, {score: 2}]);
-                    expect(total).toBe(3);
-            });
-        });
-    }
+	function run(){
+		describe( "Score Spec", function(){
+			it( "calculate total score", function(){
+				score = new Score();
+				total = score.calculateScore( [ { score : 1 }, { score : 2 } ] );
+				expect( total ).toBe( 3 );
+			} );
+		} );
+	}
+
 }
